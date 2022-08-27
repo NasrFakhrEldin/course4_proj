@@ -49,6 +49,8 @@ class Dev(Configuration):
         'django.contrib.messages',
         'django.contrib.staticfiles',
 
+        'django_celery_results',
+
         'movies',
         'gh',
     ]
@@ -162,3 +164,10 @@ class Dev(Configuration):
 
     # OMDB_KEY = values.SecretValue()
     OMDB_KEY = "c3169593"
+
+    # Celery
+    CELERY_RESULT_BACKEND = "django-db"
+    CELERY_BROKER_URL = "redis://localhost:6379/0"
+
+
+# https://docs.celeryq.dev/en/stable/userguide/configuration.html
