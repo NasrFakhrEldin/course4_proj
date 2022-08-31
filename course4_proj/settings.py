@@ -169,5 +169,6 @@ class Dev(Configuration):
     CELERY_RESULT_BACKEND = "django-db"
     CELERY_BROKER_URL = "redis://localhost:6379/0"
 
-
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    ADMINS = [("Nasr", "nasrelsisi00@gmail.com")]
 # https://docs.celeryq.dev/en/stable/userguide/configuration.html
