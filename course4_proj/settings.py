@@ -50,6 +50,7 @@ class Dev(Configuration):
         'django.contrib.staticfiles',
 
         'django_celery_results',
+        'django_celery_beat',
 
         'movies',
         'gh',
@@ -171,4 +172,5 @@ class Dev(Configuration):
 
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     ADMINS = [("Nasr", "nasrelsisi00@gmail.com")]
+    
 # https://docs.celeryq.dev/en/stable/userguide/configuration.html
